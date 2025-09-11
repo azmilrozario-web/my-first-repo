@@ -1,26 +1,32 @@
-// Define the character we will eventually use to build the pyramid
+// Declare a constant named 'character' and assign it the string "#", this will be the symbol we will use
 const character = "#";
 
-// Define how many rows (levels) we want in the pyramid
+// Declare a constant named 'count' and assign it the number 8, as we want 8 steps to the pyramid later
 const count = 8;
 
-// Create an empty array to hold our row data
+// Declare a constant named 'rows' and assign it an empty array [], this is to hold our 8 steps as we go
 const rows = [];
 
-// This loop runs from i = 0 up to (but not including) count (8)
-// On each iteration, we add the current i value into the rows array
+// Start a 'for' loop:
+//  - let i = 0 → initialize loop variable i with the value 0
+//  - i < count → run loop as long as i is less than count (8)
+//  - i = i + 1 → after each loop, increase i by 1
 for (let i = 0; i < count; i = i + 1) {
+  
+  // rows.push(i):
+  //   - 'rows' is the array declared earlier
+  //   - .push() is an array method that adds a new element to the end
+  //   - here, it adds the current value of i into rows
   rows.push(i);
 }
 
-// Create a variable to store the final "pyramid string"
+// Declare a variable named 'result' and assign it an empty string "", which we will fill as we go
 let result = "";
 
-// Loop through each item inside the rows array
-// For every row value, we add (concatenate) it onto the result string
-for (const row of rows) {
-  result = result + row;
-}
+// console.log(result):
+//   - console.log is a function that prints something to the console
+//   - here, it prints the current value of result (which is "")
+console.log(result);
 
-// Finally, print the complete result string to the console
+// Print result again (same as above, still an empty string)
 console.log(result);

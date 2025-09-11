@@ -1,4 +1,36 @@
 // =====================
+// Pyramid Summary
+// =====================
+
+// Define the building block character
+const character = "#";
+
+// Define how many rows (height of pyramid)
+const count = 8;
+
+// Empty array to store each row of the pyramid
+const rows = [];
+
+// Empty string to hold the final pyramid output
+let result = "";
+
+// First loop: build the rows one by one
+for (let i = 0; i < count; i = i + 1) {
+  // Use repeat(i + 1) so row grows bigger each time
+  rows.push(character.repeat(i + 1));
+}
+
+// Second loop: join all rows into one string with new lines
+for (const row of rows) {
+  result = result + row + "\n";
+}
+
+// Print the pyramid to the console
+console.log(result);
+
+
+
+// =====================
 // Declare and initialize variables
 // =====================
 

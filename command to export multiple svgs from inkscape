@@ -1,1 +1,2 @@
+cd "C:\Users\Dell\Documents\Games\My First RPG\img\SVG Characters"
 for %f in (*.svg) do "C:\Program Files\Inkscape\bin\inkscape.exe" "%f" --export-type=png --export-filename="%~nf.png" --export-width=48 --export-height=48

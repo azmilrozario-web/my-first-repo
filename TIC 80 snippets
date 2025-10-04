@@ -1,0 +1,31 @@
+-- set starting values
+frame = 0   -- which frame of animation we’re on (0 or 1)
+timer = 0   -- counts how many TIC() cycles have passed
+
+function TIC()
+    cls(0)  -- clear the screen each frame (color 0 = black)
+
+    -- count how many times TIC() has run
+    timer = timer + 1  
+    
+    -- every 15 cycles, switch the animation frame
+    if timer % 15 == 0 then
+        -- (frame + 1) % 2:
+        -- 1. add 1 to the current frame
+        -- 2. apply % 2 → keeps only remainder after dividing by 2
+        -- This forces frame to alternate: 0 → 1 → 0 → 1…
+        frame = (frame + 1) % 2
+    end
+
+    -- draw a sprite made of 4 slots (16×16)
+    -- frame*4 → jumps to the correct group of slots
+    --   frame = 0 → use slots 0,1,2,3
+    --   frame = 1 → use slots 4,5,6,7
+    draw_sprite16(frame*4, x, y)  
+
+    -- player movement controls
+    if btn(2) then x = x - 1 end  -- left
+    if btn(3) then x = x + 1 end  -- right
+    if btn(0) then y = y - 1 end  -- up
+    if btn(1) then y = y + 1 end  -- down
+end

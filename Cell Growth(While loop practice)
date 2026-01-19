@@ -1,0 +1,28 @@
+# take the initial cell population as input
+cells = int(input())
+
+# take the number of days as input
+days = int(input())
+
+# initialize the day counter
+counter = 1
+
+# complete the while loop
+while counter <= days:
+    cells = cells * 2
+
+    # Daily message
+    print("Day " + str(counter) + ": " + str(cells))
+
+    counter = counter + 1
+
+#A powerful beginner trick (do this mentally)
+Before running a while loop, always ask:
+❓ Three survival questions
+What is the condition?
+→ counter <= days
+What changes that condition?
+→ counter = counter + 1
+When will it become false?
+→ when counter becomes days + 1
+If you can answer those three, you understand the loop.

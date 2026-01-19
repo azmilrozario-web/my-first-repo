@@ -7,4 +7,4 @@ days = int(input())
 # for loop handles the counter automatically
 for counter in range(1, days + 1):
     cells = cells * 2
-    print("Day " + str(counter) + ": " + str(cells))
+    print("Day " + str(counter) + ": " + str(cells)) 

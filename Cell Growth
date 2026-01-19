@@ -1,3 +1,5 @@
+#for loop practice
+
 # take the initial cell population as input
 cells = int(input())
 
